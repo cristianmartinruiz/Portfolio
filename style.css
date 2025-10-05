@@ -79,7 +79,6 @@ main {
   height: 40vh;
 }
 
-
 .wellcome-content {
   display: flex;
   align-items: center;
@@ -166,10 +165,8 @@ html {
   /* position: relative;  */
   width: 100%;
   background-color: var(--scroll-color1);
-  padding: 0rem 1rem;
-  /* mismo padding lateral que proyectos */
-  text-align: center;
-  /* igual que proyectos */
+  padding: 0rem 1rem;/* mismo padding lateral que proyectos */
+  text-align: center;/* igual que proyectos */
   margin: 0 0 30px;
   font-weight: 400;
   color: var(--scroll-color5);
@@ -180,19 +177,15 @@ html {
 }
 
 .experiences p {
-  padding-bottom: 30px;
-  ;
+  padding-bottom: 1px;
+  
 }
 
 .experiences hr {
-  border: none;
-  /* eliminamos estilos por defecto */
-  border-top: 1px solid #e5e5e5;
-  /* línea gris muy clara */
-  margin: 1rem auto;
-  /* buen espacio arriba y abajo */
-  width: 30%;
-  /* ocupa todo el contenedor */
+  border: none;/* eliminamos estilos por defecto */
+  border-top: 1px solid #e5e5e5;/* línea gris muy clara */
+  margin: 1rem auto;/* buen espacio arriba y abajo */
+  width: 30%;/* ocupa todo el contenedor */
 }
 
 .experience-card {
@@ -201,8 +194,7 @@ html {
   background: var(--scroll-color);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  /* transition: transform 0.3s, box-shadow 0.3s; */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);/* transition: transform 0.3s, box-shadow 0.3s; */
   max-width: 500px;
   margin: 1rem auto;
   overflow: visible;
@@ -222,27 +214,18 @@ html {
 .experience-card::before {
   content: '<';
   position: absolute;
-  top: 60px;
-  /* altura desde la parte superior de la tarjeta */
-  left: -23px;
-  /* distancia desde la tarjeta hacia la barra de progreso */
-  font-size: 1rem;
-  /* tamaño grande similar a un triángulo */
-  color: var(--scroll-color5);
-  /* mismo color que el fondo o barra */
-  z-index: 5;
-  /* encima de la barra de progreso */
+  top: 60px;/* altura desde la parte superior de la tarjeta */
+  left: -23px;/* distancia desde la tarjeta hacia la barra de progreso */
+  font-size: 1rem;/* tamaño grande similar a un triángulo */
+  color: var(--scroll-color5);/* mismo color que el fondo o barra */
+  z-index: 5;/* encima de la barra de progreso */
 }
-
-
-
 
 
 /* Círculo con año */
 .experience-year {
   position: absolute;
-  top: 70px;
-  /* ajusta para centrar verticalmente */
+  top: 70px;/* ajusta para centrar verticalmente */
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -252,8 +235,7 @@ html {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  z-index: 6;
-  /* encima de triángulo y barra */
+  z-index: 6;/* encima de triángulo y barra */
   left: -150px;
   transform: translateY(-50%);
 }
@@ -341,58 +323,52 @@ transform: translateY(3px);
 
 
 
-
-
-
 /* :::::::::::::::::::::::::::::: FIN ESTILO EXPERIENCIAS::::::::::::::::::::: */
 
 
 /* ::::::::::::::::::::::::::::::ESTILO CONTACTO::::::::::::::::::::: */
 
-.contact {
+.contacto {
+  /* position: relative;  */
   width: 100%;
   background-color: var(--scroll-color1);
-  padding: 3rem 1rem;
-  text-align: center;
-  margin: 0 0 20px;
+  padding-top: 50px;
+  text-align: center;/* igual que proyectos */
   font-weight: 400;
   color: var(--scroll-color5);
 }
 
-.contact hr {
-  border: none;
-  /* eliminamos estilos por defecto */
-  border-top: 1px solid #e5e5e5;
-  /* línea gris muy clara */
-  margin: 3rem auto;
-  /* buen espacio arriba y abajo */
-  width: 30%;
-  /* ocupa todo el contenedor */
+.contacto h2 {
+  padding-top: 0px;
+}
 
+.contacto p {
+  padding-bottom: 10px;
+}
+
+.contacto hr {
+  border: none;/* eliminamos estilos por defecto */
+  border-top: 1px solid #e5e5e5;/* línea gris muy clara */
+  margin: 1rem auto;/* buen espacio arriba y abajo */
+  width: 30%;/* ocupa todo el contenedor */
 }
 
 .contact-iconos {
   display: flex;
-  justify-content: center;
-  /* centra en horizontal */
-  gap: 30px;
-  /* espacio entre iconos */
+  justify-content: center;/* centra en horizontal */
+  gap: 30px;/* espacio entre iconos */
   margin-top: 20px;
 }
 
 .contact-iconos a {
-  font-size: 2rem;
-  /* tamaño de los iconos */
-  color: var(--scroll-color5);
-  /* color base */
+  font-size: 2rem;/* tamaño de los iconos */
+  color: var(--scroll-color5);/* color base */
   transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .contact-iconos a:hover {
-  color: var(--scroll-color3);
-  /* azul (LinkedIn como ejemplo) */
-  transform: scale(1.2);
-  /* efecto zoom */
+  color: var(--scroll-color3);/* azul (LinkedIn como ejemplo) */
+  transform: scale(1.2);/* efecto zoom */
 }
 
 /* ::::::::::::::::::::::::::::::FIN ESTILO CONTACTO::::::::::::::::::::: */
@@ -453,8 +429,7 @@ transform: translateY(3px);
 /* Cabecera proyectos*/
 .proyectos {
   width: 100%;
-  background-color: var(--scroll-color1);
-  /* padding: 1.2rem 0rem; */
+  background-color: var(--scroll-color1);/* padding: 1.2rem 0rem; */
   text-align: center;
   color: var(--scroll-color5);
 }
@@ -467,15 +442,12 @@ transform: translateY(3px);
 }
 
 .proyectos h2 i {
-  font-size: 1.2rem;
-  /* Tamaño del icono ligeramente más grande */
-  -webkit-text-stroke: 0px var(--scroll-color5);
-  /* borde externo */
-
+  font-size: 1.2rem;/* Tamaño del icono ligeramente más grande */
+  -webkit-text-stroke: 0px var(--scroll-color5);/* borde externo */
 }
 
 .proyectos p {
-  padding-top: 3px;
+  padding-top: 0px;
   margin-bottom: 2rem;
   color: var(--scroll-color5);
   font-size: 1rem;
@@ -490,19 +462,16 @@ transform: translateY(3px);
 
 /* -----------------fin cabecera proyectos-------------------------- */
 
-.proyectos {
-  padding-bottom: 300px;
-}
+/* .proyectos {
+  padding-bottom: 100px;
+} */
 
 /* Contenedor tarjetas proyectos */
 .proyectos-cards {
   display: flex;
-  flex-direction: column;
-  /* coloca las tarjetas una debajo de otra */
-  gap: 2rem;
-  /* separación entre tarjetas */
-  margin: 0rem 0;
-  /* opcional: espacio arriba y abajo del bloque completo */
+  flex-direction: column;/* coloca las tarjetas una debajo de otra */
+  gap: 2rem;/* separación entre tarjetas */
+  margin: 0rem 0;/* opcional: espacio arriba y abajo del bloque completo */
 }
 
 
@@ -516,26 +485,19 @@ transform: translateY(3px);
   border-radius: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 800px;
-  /* mismo ancho que experiencias */
+  max-width: 800px;/* mismo ancho que experiencias */
   margin: 0rem auto;
 }
 
 
 .proyectos-card img {
-  width: 355px;
-  /* ajusta al tamaño que quieras */
+  width: 355px;/* ajusta al tamaño que quieras */
   height: auto;
-  margin: 0;
-  /* sin márgenes */
-  padding: 0;
-  /* sin padding */
-  border-radius: 15px;
-  /* sin redondeo */
-  object-fit: cover;
-  /* mantiene proporción y recorta si es necesario */
-  flex-shrink: 0;
-  /* evita que se reduzca */
+  margin: 0;/* sin márgenes */
+  padding: 0;/* sin padding */
+  border-radius: 15px;/* sin redondeo */
+  object-fit: cover;/* mantiene proporción y recorta si es necesario */
+  flex-shrink: 0;/* evita que se reduzca */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* sombra sutil */
 }
@@ -635,10 +597,6 @@ transform: translateY(3px);
   background-color: var(--scroll-color3);
   transform: translateY(-2px);
 }
-
-
-
-
 
 
 /* :::::::::::::::::::::::::::::fFIN ESTILO PROYECTOS::::::::::::::::::::::::::: */
@@ -762,9 +720,106 @@ transform: translateY(3px);
 }
 
 
-
-
-
-
-
 /* :::::::::::::::::::::::::::::FIN FOOTER::::::::::::::::::::::::::: */
+
+/* ::::::::::::::::::::::::::::::::::::::::::: RESPONSIVE ::::::::::::::::::::::::::::::::::::::::::: */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .wellcome-text h1 {
+    font-size: 4rem;
+  }
+  .proyectos-card {
+    gap: 2rem;
+  }
+  .proyectos-card img {
+    width: 250px;
+  }
+}
+
+/* Móviles grandes (≤ 768px) */
+@media (max-width: 768px) {
+  .wellcome-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .wellcome-text {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .wellcome-text h1 {
+    font-size: 3rem;
+  }
+
+  .experience-card {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .experience-year {
+    position: static;
+    margin: 0 auto 1rem auto;
+    transform: none;
+  }
+
+  #progress-track,
+  #progress-bar {
+    display: none; /* se elimina la barra lateral en móvil */
+  }
+
+  .proyectos-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .proyectos-card img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .proyectos-card-content {
+    text-align: center;
+  }
+
+  .contact-iconos {
+    gap: 20px;
+  }
+}
+
+/* Móviles pequeños (≤ 480px) */
+@media (max-width: 480px) {
+  .wellcome-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .wellcome-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .wellcome-text p {
+    font-size: 0.9rem;
+  }
+
+  .experience-card h3,
+  .proyectos-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .proyectos-desc,
+  .experience-desc {
+    font-size: 0.85rem;
+  }
+
+  .proyecto-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ::::::::::::::::::::::::::::::::::::::::::: FIN RESPONSIVE ::::::::::::::::::::::::::::::::::::::::::: */
