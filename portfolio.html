@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Porfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+  <main>
+    <section id="wellcome" class="wellcome-section">
+      <div class="wellcome-content">
+
+        <div class="wellcome-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">
+                <div class="line"></div><span>About</span>
+              </a></li>
+            <li><a href="portfolio.html" class="active">
+                <div class="line"></div><span>Portfolio</span>
+              </a></li>
+            <li><a href="contact.html">
+                <div class="line"></div><span>Contact</span>
+              </a></li>
+          </ul>
+        </div>
+
+        <div class="wellcome-text">
+          <h1>portfolio.</h1>
+          <h2>Explore some of my latest works.</h2>
+          <p>Since 2005, I've enjoyed turning complex problems into simple, beautiful and intuitive designs. When I'm
+            not pushing pixels, you'll find me cooking, gardening or working out in the park.</p>
+        </div>
+
+      </div>
+      <!-- indicador centrado en la franja (mitad arriba / mitad abajo) -->
+      <a href="#proyectos" class="scroll-indicator" aria-label="Ir a experiencias">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </a>
+    </section>
+
+        <!-- -----------------cabecera proyectos------------------------------ -->
+
+
+    <section class="proyectos" id="proyectos">
+      <h2><i class="fa-solid fa-list"></i> Projects</h2>
+
+      <hr>
+
+      <p>A collection of projects I've worked on.</p>
+
+      <div class="proyectos-cards">
+        <!-- -----------------Coffe Academy------------------------------ -->
+
+        <div class="proyectos-card">
+          <img src="img/coffeacademy.png" alt="Coffe Academy">
+          <div class="proyectos-card-content">
+            <h3>Coffee Academy</h3>
+            <p class="proyectos-desc">
+              One of my first major projects and an incredible <strong>learning experience.</strong> I designed an intuitive platform for a barista school, focusing on user experience and <strong> mobile optimization.</strong> This project allowed me to apply user-centered design principles while collaborating closely with the client to bring their educational vision to life.            </p>
+            <div class="proyectos-tech">
+              <span>Html</span>
+              <span>Css</span>
+              <span>Js</span>
+            </div>
+            <a href="https://tusitio.com" target="_blank" class="proyecto-btn">
+              Visitar <i class="bi bi-box-arrow-up-right" style="margin-left: 4px;"></i>
+            </a>
+          </div>
+        </div>
+        <!-- -----------------------Doisinger---------------------------- -->
+
+        <div class="proyectos-card">
+          <img src="img/doisinger.com_.png" alt="Otro Proyecto">
+          <div class="proyectos-card-content">
+            <h3>Doisinger</h3>
+            <p class="proyectos-desc">
+              Doisinger is my personal project: a<strong> web design agency </strong>creating attractive, functional, and SEO-optimized websites. Each design prioritizes user experience, ensuring intuitive navigation and brand consistency. This project allowed me to apply my skills in UX/UI, web development, and branding, delivering <strong>complete digital solutions </strong>to small businesses and entrepreneurs.            </p>
+            <div class="proyectos-tech">
+              <span>Wordpress</span>
+
+            </div>
+            <a href="https://tusitio.com" target="_blank" class="proyecto-btn">
+              Visitar <i class="bi bi-box-arrow-up-right" style="margin-left: 4px;"></i>
+            </a>
+          </div>
+        </div>
+        <!-- ------------------------En cuerpo y alma-------------------------- -->
+
+        <div class="proyectos-card">
+          <img src="img/encuerpoyalmabcn.com_ (1).png" alt="EnCuerpoyAlma">
+          <div class="proyectos-card-content">
+            <h3>En Cuerpo y Alma</h3>
+            <p class="proyectos-desc">
+              This was my first real client: I developed the website for a beauty center, focusing on an attractive and modern visual experience. I implemented local SEO strategies to improve search engine visibility and attract clients in the area. This project allowed me to combine web design, UX/UI, and SEO optimization in a real-world project with measurable results.
+            </p>
+            <div class="proyectos-tech">
+              <span>Wordpress</span>
+
+            </div>
+            <a href="https://tusitio.com" target="_blank" class="proyecto-btn">
+              Visitar <i class="bi bi-box-arrow-up-right" style="margin-left: 4px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- ------------------------FOOTER----------------------------- -->
+    <section id="footer" class="footer">
+
+      <!-- Botón para subir al wellcome-->
+      <a href="#wellcome" class="scroll-footer" aria-label="Volver al inicio">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 15l6-6 6 6"></path>
+        </svg>
+      </a>
+
+      <h2>Contact</h2>
+
+      <hr>
+
+      <p>If you'd like to get in touch, you can reach me using the following methods.</p>
+
+      <!-- <div class="contact-grid"> -->
+      <div class="contact-iconos">
+        <a href="mailto:tuemail@ejemplo.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/tuusuario" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+     
+
+
+
+
+
+    </section>
+
+
+
+
+    <!-- ---------------------fin---FOOTER----------------------------- -->
+
+
+
+
+
+
+  </main>
+
+  <script src="portfolio.js"></script>
+</body>
+
+</html>

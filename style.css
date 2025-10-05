@@ -1,0 +1,770 @@
+:root {
+  --scroll-size: 75px;
+  --scroll-color: #ffffff;
+  /* color de fondo */
+  --scroll-color1: #F2F2F2;
+  /* color de la flecha */
+  --scroll-color2: #D9D9D9;
+  /* color de la flecha */
+  --scroll-color3: #BFBFBF;
+  /* color de la flecha */
+  --scroll-color4: #8C8C8C;
+  /* color de la flecha */
+  --scroll-color5: #737373;
+  /* color de la flecha */
+
+
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: var(--scroll-color1);
+  color: var(--scroll-color5);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  /* espacio arriba y abajo */
+
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::WELLCOME AREA::::::::::::::::::::::::::::::: */
+/* ::::::::::::::::::::::::::::::::::::::::::::::::boton next section::::::::::::::::::::::::::::::: */
+
+.wellcome-text {
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-left: 20px;
+  /* separación del menú */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.wellcome-text h1 {
+  margin: 0 0 10px;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.wellcome-text h2 {
+  margin: 0 0 20px;
+  font-weight: 400;
+  color: var(--scroll-color5);
+}
+
+.wellcome-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--scroll-color5);
+}
+
+.wellcome-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--scroll-color);
+  box-shadow: 0 0.1px 6px rgba(0, 0, 0, 0.08);
+  padding: 3rem 2rem;
+  height: 40vh;
+}
+
+
+.wellcome-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1000px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Opcional: para que el menú quede bien alineado a la izquierda y el texto también */
+.wellcome-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 20px;
+  /* espacio interno */
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::FIN WELLCOME AREA::::::::::::::::::::::::::::::: */
+/* ::::::::::::::::::::::::::::::::::::::::::::::::boton next section::::::::::::::::::::::::::::::: */
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::SCROLL INDICADOR::::::::::::::::::::::::::::::: */
+
+/* indicador */
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: calc(-1 * var(--scroll-size) / 2);
+  transform: translateX(-50%);
+  width: var(--scroll-size);
+  height: var(--scroll-size);
+  border-radius: 50%;
+  background: var(--scroll-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--scroll-color5);
+  text-decoration: none;
+  z-index: 12;
+  transition: transform .22s ease;
+  /* sombra solo inferior */
+  box-shadow: 0 6px 12px -6px rgba(0, 0, 0, 0.08);
+}
+
+/* hover / focus -> solo movimiento hacia abajo */
+.scroll-indicator:hover,
+.scroll-indicator:focus {
+  transform: translateX(-50%) translateY(6px);
+  outline: none;
+}
+
+/* flecha */
+.scroll-indicator svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Scroll suave en toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::FIN SCROLL INDICADOR::::::::::::::::::::::::::::::: */
+
+
+
+/* ::::::::::::::::::::::::::::::ESTILO EXPERIENCIAS::::::::::::::::::::: */
+
+.experiences {
+  /* position: relative;  */
+  width: 100%;
+  background-color: var(--scroll-color1);
+  padding: 0rem 1rem;
+  /* mismo padding lateral que proyectos */
+  text-align: center;
+  /* igual que proyectos */
+  margin: 0 0 30px;
+  font-weight: 400;
+  color: var(--scroll-color5);
+}
+
+.experiences h2 {
+  padding-top: 50px;
+}
+
+.experiences p {
+  padding-bottom: 30px;
+  ;
+}
+
+.experiences hr {
+  border: none;
+  /* eliminamos estilos por defecto */
+  border-top: 1px solid #e5e5e5;
+  /* línea gris muy clara */
+  margin: 1rem auto;
+  /* buen espacio arriba y abajo */
+  width: 30%;
+  /* ocupa todo el contenedor */
+}
+
+.experience-card {
+  position: relative;
+  text-align: left;
+  background: var(--scroll-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  /* transition: transform 0.3s, box-shadow 0.3s; */
+  max-width: 500px;
+  margin: 1rem auto;
+  overflow: visible;
+}
+
+.experience-card-content {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-card:hover .experience-card-content {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* triangulo */
+.experience-card::before {
+  content: '<';
+  position: absolute;
+  top: 60px;
+  /* altura desde la parte superior de la tarjeta */
+  left: -23px;
+  /* distancia desde la tarjeta hacia la barra de progreso */
+  font-size: 1rem;
+  /* tamaño grande similar a un triángulo */
+  color: var(--scroll-color5);
+  /* mismo color que el fondo o barra */
+  z-index: 5;
+  /* encima de la barra de progreso */
+}
+
+
+
+
+
+/* Círculo con año */
+.experience-year {
+  position: absolute;
+  top: 70px;
+  /* ajusta para centrar verticalmente */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--scroll-color);
+  color: var(--scroll-color5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  z-index: 6;
+  /* encima de triángulo y barra */
+  left: -150px;
+  transform: translateY(-50%);
+}
+
+
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  z-index: 7;
+}
+
+.experience-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--scroll-color5);
+}
+
+.experience-date {
+  font-size: 0.9rem;
+  color: var(--scroll-color3);
+  margin-bottom: 1rem;
+}
+
+.experience-role {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--scroll-color3);
+}
+
+.experience-desc {
+  font-size: 0.95rem;
+  color: var(--scroll-color5);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.experience-tech {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.experience-tech span {
+  background: #f0f0f0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--scroll-color5);
+}
+
+
+.icon-title .material-symbols-outlined {
+vertical-align: middle;
+margin-bottom: 8px;
+font-size: 1,5rem;
+color: var(--scroll-color5);
+transform: translateY(3px);
+}
+
+
+#progress-track {
+  position: absolute;
+  left: 550px;
+  width: 4px;
+  background-color: var(--scroll-color2);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+
+
+/* barra que crece con scroll */
+#progress-bar {
+  position: absolute;
+  left: 550px;
+  width: 4px;
+  background: var(--scroll-color5);
+  border-radius: 2px;
+  transition: height 0.1s ease;
+  height: 0;
+  z-index: 3;
+}
+
+
+
+
+
+
+/* :::::::::::::::::::::::::::::: FIN ESTILO EXPERIENCIAS::::::::::::::::::::: */
+
+
+/* ::::::::::::::::::::::::::::::ESTILO CONTACTO::::::::::::::::::::: */
+
+.contact {
+  width: 100%;
+  background-color: var(--scroll-color1);
+  padding: 3rem 1rem;
+  text-align: center;
+  margin: 0 0 20px;
+  font-weight: 400;
+  color: var(--scroll-color5);
+}
+
+.contact hr {
+  border: none;
+  /* eliminamos estilos por defecto */
+  border-top: 1px solid #e5e5e5;
+  /* línea gris muy clara */
+  margin: 3rem auto;
+  /* buen espacio arriba y abajo */
+  width: 30%;
+  /* ocupa todo el contenedor */
+
+}
+
+.contact-iconos {
+  display: flex;
+  justify-content: center;
+  /* centra en horizontal */
+  gap: 30px;
+  /* espacio entre iconos */
+  margin-top: 20px;
+}
+
+.contact-iconos a {
+  font-size: 2rem;
+  /* tamaño de los iconos */
+  color: var(--scroll-color5);
+  /* color base */
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.contact-iconos a:hover {
+  color: var(--scroll-color3);
+  /* azul (LinkedIn como ejemplo) */
+  transform: scale(1.2);
+  /* efecto zoom */
+}
+
+/* ::::::::::::::::::::::::::::::FIN ESTILO CONTACTO::::::::::::::::::::: */
+
+/* ::::::::::::::::::::::::::::::ESTILO BOTONES::::::::::::::::::::: */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: var(--scroll-color5);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.nav-links .line {
+  width: 80px;
+  height: 2px;
+  background-color: var(--scroll-color5);
+  border-radius: 1px;
+  margin-right: 10px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.nav-links li a span {
+  transition: transform 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Hover y active: línea crece solo hacia la derecha */
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--scroll-color5);
+  font-weight: 700;
+}
+
+.nav-links li a:hover .dynamic-line,
+.nav-links li a.active .dynamic-line {
+  width: 140px;
+  /* la derecha crece, izquierda intacta */
+  height: 4px;
+}
+
+/* ::::::::::::::::::::::::::::::ESTILO BOTONES::::::::::::::::::::: */
+
+
+/* :::::::::::::::::::::::::::::ESTILO PROYECTOS::::::::::::::::::::::::::: */
+
+/* Cabecera proyectos*/
+.proyectos {
+  width: 100%;
+  background-color: var(--scroll-color1);
+  /* padding: 1.2rem 0rem; */
+  text-align: center;
+  color: var(--scroll-color5);
+}
+
+.proyectos h2 {
+  font-weight: 700;
+  padding-top: 50px;
+  font-size: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+.proyectos h2 i {
+  font-size: 1.2rem;
+  /* Tamaño del icono ligeramente más grande */
+  -webkit-text-stroke: 0px var(--scroll-color5);
+  /* borde externo */
+
+}
+
+.proyectos p {
+  padding-top: 3px;
+  margin-bottom: 2rem;
+  color: var(--scroll-color5);
+  font-size: 1rem;
+}
+
+.proyectos hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 1rem auto 0.8rem;
+  width: 30%;
+}
+
+/* -----------------fin cabecera proyectos-------------------------- */
+
+.proyectos {
+  padding-bottom: 300px;
+}
+
+/* Contenedor tarjetas proyectos */
+.proyectos-cards {
+  display: flex;
+  flex-direction: column;
+  /* coloca las tarjetas una debajo de otra */
+  gap: 2rem;
+  /* separación entre tarjetas */
+  margin: 0rem 0;
+  /* opcional: espacio arriba y abajo del bloque completo */
+}
+
+
+.proyectos-card {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+  text-align: left;
+  background: var(--scroll-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 800px;
+  /* mismo ancho que experiencias */
+  margin: 0rem auto;
+}
+
+
+.proyectos-card img {
+  width: 355px;
+  /* ajusta al tamaño que quieras */
+  height: auto;
+  margin: 0;
+  /* sin márgenes */
+  padding: 0;
+  /* sin padding */
+  border-radius: 15px;
+  /* sin redondeo */
+  object-fit: cover;
+  /* mantiene proporción y recorta si es necesario */
+  flex-shrink: 0;
+  /* evita que se reduzca */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* sombra sutil */
+}
+
+
+
+/* efecto over en la imagen dentro de la targeta */
+.proyectos-card img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.proyectos-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  /* un poco más de luz */
+}
+
+/* ------------------------------------------- */
+
+
+
+/* contenedor texto */
+.proyectos-card-content {
+  display: flex;
+  flex-direction: column;
+  /* ← columna */
+  justify-content: center;
+  /* centra verticalmente dentro del espacio */
+  gap: 0.5rem;
+  /* separación entre los elementos de texto */
+}
+
+
+.proyectos-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  z-index: 7;
+}
+
+.proyectos-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--scroll-color5);
+}
+
+.proyectos-date {
+  font-size: 0.9rem;
+  color: var(--scroll-color3);
+  margin-bottom: 1rem;
+}
+
+.proyectos-role {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--scroll-color3);
+}
+
+.proyectos-desc {
+  font-size: 0.95rem;
+  color: var(--scroll-color5);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.proyectos-tech {
+  margin-top: -13px;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+.proyectos-tech span {
+  background: var(--scroll-color1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.proyecto-btn {
+  max-width: fit-content;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--scroll-color5);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.proyecto-btn:hover {
+  background-color: var(--scroll-color3);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+/* :::::::::::::::::::::::::::::fFIN ESTILO PROYECTOS::::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::::::FOOTER::::::::::::::::::::::::::: */
+
+.footer {
+  width: 100%;
+  background-color: var(--scroll-color);
+  /* Fondo blanco */
+  color: var(--scroll-color5);
+  /* Texto oscuro */
+  text-align: center;
+  /* Centrado */
+  padding: 50px 20px;
+  /* Espacio interno */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  /* sombra sutil arriba */
+  margin-top: 50px;
+  /* espacio superior */
+  position: relative;
+  /* necesario para posicionar el botón relativo al footer */
+  background-color: #fff;
+  color: var(--scroll-color5);
+  padding: 80px 20px 100px 20px;
+}
+
+.footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer p {
+  max-width: 600px;
+  /* ancho máximo para que no quede muy largo */
+  margin: 0 auto 25px auto;
+  /* centrado + espacio inferior */
+  color: var(--scroll-color5);
+  /* gris suave */
+}
+
+.footer hr {
+  border: none;
+  /* eliminamos estilos por defecto */
+  border-top: 1px solid #e5e5e5;
+  /* línea gris muy clara */
+  margin: 3rem auto;
+  /* buen espacio arriba y abajo */
+  width: 30%;
+  /* ocupa todo el contenedor */
+
+}
+
+
+.footer .contact-iconos {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  /* espacio entre iconos */
+}
+
+.footer .contact-iconos a {
+  font-size: 1.6rem;
+  color: var(--scroll-color5);
+  /* color base */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .contact-iconos a:hover {
+  color: var(--scroll-color3);
+  /* color destacado */
+  transform: scale(1.2);
+  /* pequeño zoom en hover */
+}
+
+
+/* Botón idéntico al scroll-indicator */
+
+
+.scroll-footer {
+  top: -35px;
+  /* ajusta para que quede justo encima del footer */
+  position: absolute;
+  left: 50%;
+  bottom: calc(-1 * var(--scroll-size) / 2);
+  /* igual que el indicador superior */
+  transform: translateX(-50%);
+  width: var(--scroll-size, 40px);
+  height: var(--scroll-size, 40px);
+  border-radius: 50%;
+  background: var(--scroll-color, #ff6f61);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--scroll-color5, #fff);
+  text-decoration: none;
+  z-index: 12;
+  transition: transform .22s ease;
+  /* sombra solo superior */
+  box-shadow: 0 -6px 12px -6px rgba(0, 0, 0, 0.08);
+}
+
+/* hover / focus -> mismo movimiento que el indicador superior */
+.scroll-footer:hover,
+.scroll-footer:focus {
+  transform: translateX(-50%) translateY(-6px);
+  /* hacia arriba */
+  outline: none;
+}
+
+/* flecha */
+.scroll-footer svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+
+
+
+
+
+/* :::::::::::::::::::::::::::::FIN FOOTER::::::::::::::::::::::::::: */
