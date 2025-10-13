@@ -158,34 +158,29 @@ html {
 /* ::::::::::::::::::::::::::::::::::::::::::::::::FIN SCROLL INDICADOR::::::::::::::::::::::::::::::: */
 
 
-
-/* ::::::::::::::::::::::::::::::ESTILO EXPERIENCIAS::::::::::::::::::::: */
-
 .experiences {
-  /* position: relative;  */
   width: 100%;
   background-color: var(--scroll-color1);
-  padding: 0rem 1rem;/* mismo padding lateral que proyectos */
-  text-align: center;/* igual que proyectos */
+  padding: 0rem 1rem;
+  text-align: center;
   margin: 0 0 30px;
   font-weight: 400;
   color: var(--scroll-color5);
 }
 
-.experiences h2 {
-  padding-top: 50px;
+.experiences h2 { 
+  padding-top: 50px; 
 }
 
-.experiences p {
-  padding-bottom: 1px;
-  
+.experiences p { 
+  padding-bottom: 1px; 
 }
 
 .experiences hr {
-  border: none;/* eliminamos estilos por defecto */
-  border-top: 1px solid #e5e5e5;/* línea gris muy clara */
-  margin: 1rem auto;/* buen espacio arriba y abajo */
-  width: 30%;/* ocupa todo el contenedor */
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 1rem auto;
+  width: 30%;
 }
 
 .experience-card {
@@ -194,38 +189,124 @@ html {
   background: var(--scroll-color);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);/* transition: transform 0.3s, box-shadow 0.3s; */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   max-width: 500px;
   margin: 1rem auto;
   overflow: visible;
 }
 
-.experience-card-content {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
+.experience-card:hover,
 .experience-card:hover .experience-card-content {
-  transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+.experience-card h3 { 
+  font-size: 1.5rem; 
+  margin-bottom:0.5rem; 
+  color: var(--scroll-color5); 
+}
+.experience-date { 
+  font-size:0.9rem; 
+  color: var(--scroll-color3); 
+  margin-bottom:1rem; 
+}
+.experience-role { 
+  font-weight:600; 
+  margin-bottom:1rem; 
+  color: var(--scroll-color3); 
+}
+.experience-desc { 
+  font-size:0.95rem; 
+  color: var(--scroll-color5); 
+  margin-bottom:1rem; line-height:1.5; 
+}
+.experience-tech { 
+  display:flex; 
+  gap:0.5rem; 
+  flex-wrap:wrap; 
+}
+.experience-tech span { 
+  background:#f0f0f0; 
+  padding:0.3rem 0.6rem; 
+  border-radius:0.5rem; 
+  font-size:0.8rem; 
+  color: var(--scroll-color5); 
+}
 
-/* triangulo */
 .experience-card::before {
-  content: '<';
-  position: absolute;
-  top: 60px;/* altura desde la parte superior de la tarjeta */
-  left: -23px;/* distancia desde la tarjeta hacia la barra de progreso */
-  font-size: 1rem;/* tamaño grande similar a un triángulo */
-  color: var(--scroll-color5);/* mismo color que el fondo o barra */
-  z-index: 5;/* encima de la barra de progreso */
+  content:'<';
+  position:absolute;
+  top:60px;
+  left:-23px;
+  font-size:1rem;
+  color: var(--scroll-color5);
+  z-index:5;
+}
+
+.experience-year {
+  position:absolute;
+  top:70px;
+  width:60px; height:60px;
+  border-radius:50%;
+  background-color: var(--scroll-color);
+  color: var(--scroll-color5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  z-index:6;
+  left:-150px;
+  transform:translateY(-50%);
+}
+
+/* Track y barra de progreso */
+#progress-track {
+  position:absolute;
+  width:4px;
+  background-color: var(--scroll-color2);
+  border-radius:2px;
+  z-index:2;
+}
+
+#progress-bar {
+  position:absolute;
+  width:4px;
+  background-color: var(--scroll-color5);
+  border-radius:2px;
+  transition: height 0.1s ease;
+  height:0;
+  z-index:3;
 }
 
 
-/* Círculo con año */
-.experience-year {
+/* :::::::::::::::::::::::::::::: FIN ESTILO EXPERIENCIAS::::::::::::::::::::: */
+
+/* ::::::::::::::::::::::::::::::  ESTILO EDUCATION ::::::::::::::::::::: */
+
+
+/* Education: líneas de progreso */
+#edu-progress-track {
   position: absolute;
-  top: 70px;/* ajusta para centrar verticalmente */
+  width: 4px;
+  background-color: var(--scroll-color2);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+#edu-progress-bar {
+  position: absolute;
+  width: 4px;
+  background: var(--scroll-color5);
+  border-radius: 2px;
+  transition: height 0.1s ease;
+  height: 0;
+  z-index: 3;
+}
+
+/* Círculo de año educación */
+.education-year {
+  position: absolute;
+  top: 70px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -235,95 +316,12 @@ html {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  z-index: 6;/* encima de triángulo y barra */
+  z-index: 6;
   left: -150px;
   transform: translateY(-50%);
 }
 
-
-
-.experience-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  overflow: visible;
-  z-index: 7;
-}
-
-.experience-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--scroll-color5);
-}
-
-.experience-date {
-  font-size: 0.9rem;
-  color: var(--scroll-color3);
-  margin-bottom: 1rem;
-}
-
-.experience-role {
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--scroll-color3);
-}
-
-.experience-desc {
-  font-size: 0.95rem;
-  color: var(--scroll-color5);
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.experience-tech {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.experience-tech span {
-  background: #f0f0f0;
-  padding: 0.3rem 0.6rem;
-  border-radius: 0.5rem;
-  font-size: 0.8rem;
-  color: var(--scroll-color5);
-}
-
-
-.icon-title .material-symbols-outlined {
-vertical-align: middle;
-margin-bottom: 8px;
-font-size: 1,5rem;
-color: var(--scroll-color5);
-transform: translateY(3px);
-}
-
-
-#progress-track {
-  position: absolute;
-  left: 550px;
-  width: 4px;
-  background-color: var(--scroll-color2);
-  border-radius: 2px;
-  z-index: 2;
-}
-
-
-
-/* barra que crece con scroll */
-#progress-bar {
-  position: absolute;
-  left: 550px;
-  width: 4px;
-  background: var(--scroll-color5);
-  border-radius: 2px;
-  transition: height 0.1s ease;
-  height: 0;
-  z-index: 3;
-}
-
-
-
-/* :::::::::::::::::::::::::::::: FIN ESTILO EXPERIENCIAS::::::::::::::::::::: */
+/* :::::::::::::::::::::::::::::: FIN ESTILO EDUCATION ::::::::::::::::::::: */
 
 
 /* ::::::::::::::::::::::::::::::ESTILO CONTACTO::::::::::::::::::::: */
