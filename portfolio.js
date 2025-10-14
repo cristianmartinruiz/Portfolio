@@ -137,6 +137,3 @@ window.addEventListener("resize", () => {
 
 
 });
-
- 4 archivos adjuntos
-•  Analizado por Gmail
