@@ -942,7 +942,7 @@ html {
     display: flex;
     flex-direction: column;
     /* imagen arriba, texto abajo */
-    background-color: var(--scroll-color5);
+    background-color: var(--scroll-color);
     color: var(--scroll-color1);
     border-radius: 1rem;
     overflow: hidden;
@@ -950,6 +950,7 @@ html {
   }
 
   .proyectos-card img {
+    margin-bottom: -3rem;
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -995,5 +996,19 @@ html {
   .proyecto-btn:hover {
     transform: scale(1.05);
     background-color: var(--scroll-color2);
+  }
+
+  .proyectos p{
+    padding: 0 2rem;
+  }
+
+  /* --------------------- FOOTER --------------------- */
+  .footer p{
+    padding: 0 2rem;
+  }
+
+  /* --------------------- CONTACTO --------------------- */
+  .contacto p{
+    padding: 0 2rem;
   }
 }
