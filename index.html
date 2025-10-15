@@ -15,9 +15,16 @@
 <body>
 
   <main>
+
+
     <section id="wellcome" class="wellcome-section">
       <div class="wellcome-content">
 
+        <!-- HAMBURGUESA -->
+        <button id="abrir" class="hamburger-btn">☰</button>
+        <button id="cerrar" class="hamburger-btn cerrar">✖</button>
+
+        <!-- MENU -->
         <div class="wellcome-menu">
           <ul class="nav-links">
             <li><a href="index.html" class="active">
@@ -32,6 +39,11 @@
           </ul>
         </div>
 
+
+
+
+
+        <!-- TEXTO DE BIENVENIDA -->
         <div class="wellcome-text">
           <h1>about .</h1>
           <h2>I'm a web and graphic designer.</h2>
@@ -41,13 +53,14 @@
 
       </div>
 
-      <!-- indicador centrado en la franja (mitad arriba / mitad abajo) -->
+      <!-- indicador scroll -->
       <a href="#experiences" class="scroll-indicator" aria-label="Ir a experiencias">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6 9l6 6 6-6"></path>
         </svg>
       </a>
     </section>
+
 
     <section id="experiences" class="experiences">
       <h2><i class="fa-solid fa-laptop-code"></i> Experience</h2>
@@ -66,7 +79,8 @@
           <h3>Doisinger.com</h3>
           <div class="experience-date">December 2024 — Currently</div>
           <p class="experience-role">Freelance Web Designer</p>
-          <p class="experience-desc">I help local businesses establish a strong online presence by creating modern, SEO-friendly WordPress websites that reflect their identity and attract more customers.</p>
+          <p class="experience-desc">I help local businesses establish a strong online presence by creating modern,
+            SEO-friendly WordPress websites that reflect their identity and attract more customers.</p>
           <div class="experience-tech">
             <span>HTML</span>
             <span>CSS</span>
@@ -80,7 +94,9 @@
           <h3>Doqia.app</h3>
           <div class="experience-date">December 2024 — January 2025</div>
           <p class="experience-role">MVP Development Collaborator – Early-Stage Startup</p>
-          <p class="experience-desc">Collaborated with full-stack developers to design and validate the platform's MVP. Played a key role in defining features and enhancing the user experience, while supporting the platform’s go-to-market strategy.</p>
+          <p class="experience-desc">Collaborated with full-stack developers to design and validate the platform's MVP.
+            Played a key role in defining features and enhancing the user experience, while supporting the platform’s
+            go-to-market strategy.</p>
           <div class="experience-tech">
             <span>HTML</span>
             <span>CSS</span>
@@ -94,7 +110,8 @@
           <h3>Graficas Vidal & Armadans</h3>
           <div class="experience-date">diciembre 2017 — enero 2019</div>
           <p class="experience-role">Graphic Designer</p>
-          <p class="experience-desc">Contributed to the creative team on wine label designs, managed catalog layouts for major retailers’ seasonal collections, and provided website support and maintenance.</p>
+          <p class="experience-desc">Contributed to the creative team on wine label designs, managed catalog layouts for
+            major retailers’ seasonal collections, and provided website support and maintenance.</p>
           <div class="experience-tech">
             <span>Photoshop</span>
             <span>Ilustrator</span>
@@ -107,63 +124,66 @@
     </section>
 
     <section id="education" class="experiences">
-  <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-  <hr>
-  <p>Highlights of my programming education.</p>
+      <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <hr>
+      <p>Highlights of my programming education.</p>
 
-  <div class="education-cards">
+      <div class="education-cards">
 
-    <!-- Línea y barra de progreso independientes -->
-    <div id="edu-progress-track"></div>
-    <div id="edu-progress-bar"></div>
+        <!-- Línea y barra de progreso independientes -->
+        <div id="edu-progress-track"></div>
+        <div id="edu-progress-bar"></div>
 
-    <div class="education-card-content">
+        <div class="education-card-content">
 
-      <div class="experience-card">
-        <div class="education-year">2024</div>
-        <h3>Academia Conquer Blocks</h3>
-        <div class="experience-date">December 2024 — January 2025</div>
-        <p class="experience-role">Master en Desarrollo Web Full Stack</p>
-        <p class="experience-desc">Trabajé en equipo con desarrolladores full-stack...</p>
-        <div class="experience-tech">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JS</span>
-          <span>Python</span>
+          <div class="experience-card">
+            <div class="education-year">2024</div>
+            <h3>Academia Conquer Blocks</h3>
+            <div class="experience-date">December 2024 — January 2025</div>
+            <p class="experience-role">Master en Desarrollo Web Full Stack</p>
+            <p class="experience-desc">Trabajé en equipo con desarrolladores full-stack...</p>
+            <div class="experience-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+              <span>Python</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <div class="education-year">2025</div>
+            <h3>Centre D'Estudis Politecnics Barcelona</h3>
+            <div class="experience-date">December 2024 — January 2025</div>
+            <p class="experience-role">Confecció i Publicació de Pàgines Web</p>
+            <p class="experience-desc">Proyectos y validación de MVP en equipo...</p>
+            <div class="experience-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+              <span>Python</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <div class="education-year">2015</div>
+            <h3>Escola de Disseny GROC (Barcelona)</h3>
+            <div class="experience-date">December 2024 — January 2025</div>
+            <p class="experience-role">Grado Superior en Gráfica Publicitaria</p>
+            <p class="experience-desc">Training in graphic and web design, with a focus on creativity applied to visual
+              communication. Acquired knowledge in typography, corporate identity, editorial design, advertising, and
+              digital project development, integrating professional design and layout tools to create effective visual
+              solutions adapted to different media</p>
+            <div class="experience-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+              <span>Python</span>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <div class="experience-card">
-        <div class="education-year">2025</div>
-        <h3>Centre D'Estudis Politecnics Barcelona</h3>
-        <div class="experience-date">December 2024 — January 2025</div>
-        <p class="experience-role">Confecció i Publicació de Pàgines Web</p>
-        <p class="experience-desc">Proyectos y validación de MVP en equipo...</p>
-        <div class="experience-tech">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JS</span>
-          <span>Python</span>
-        </div>
-      </div>
-
-      <div class="experience-card">
-        <div class="education-year">2015</div>
-        <h3>Escola de Disseny GROC (Barcelona)</h3>
-        <div class="experience-date">December 2024 — January 2025</div>
-        <p class="experience-role">Grado Superior en Gráfica Publicitaria</p>
-        <p class="experience-desc">Training in graphic and web design, with a focus on creativity applied to visual communication. Acquired knowledge in typography, corporate identity, editorial design, advertising, and digital project development, integrating professional design and layout tools to create effective visual solutions adapted to different media</p>
-        <div class="experience-tech">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JS</span>
-          <span>Python</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <section id="footer" class="footer">
@@ -186,4 +206,5 @@
 
   <script src="portfolio.js"></script>
 </body>
+
 </html>

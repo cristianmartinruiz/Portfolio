@@ -1,42 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // =========================
-  // MENÚ ANIMADO
-  // =========================
-  const links = document.querySelectorAll(".wellcome-menu .nav-links li a");
+// =========================
+// MENÚ HAMBURGER GENERAL
+// =========================
+const hamburgers = document.querySelectorAll('.hamburger-btn');
+const menus = document.querySelectorAll('.wellcome-menu');
 
-  links.forEach(link => {
-    const line = link.querySelector(".line");
-    const text = link.querySelector("span");
+hamburgers.forEach(btn => {
+  btn.addEventListener('click', () => {
+    menus.forEach(menu => menu.classList.toggle('open'));
+  });
+});
 
-    const activateLine = () => {
+// CERRAR MENÚ AL HACER CLICK EN UN LINK
+const navLinks = document.querySelectorAll('.wellcome-menu .nav-links li a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menus.forEach(menu => menu.classList.remove('open'));
+  });
+});
+
+// ANIMACIÓN DE NAV LINKS
+navLinks.forEach(link => {
+  const line = link.querySelector(".line");
+  const text = link.querySelector("span");
+
+  const activateLine = () => {
+    if (line && window.innerWidth > 550) {
       line.style.width = "140px";
       line.style.height = "4px";
-      text.style.transform = "translateX(20px)";
-      text.style.fontWeight = "700";
     }
+    if (text) text.style.fontWeight = "700"; // siempre bold
+  }
 
-    const deactivateLine = () => {
+  const deactivateLine = () => {
+    if (line && window.innerWidth > 550) {
       line.style.width = "80px";
       line.style.height = "2px";
-      text.style.transform = "translateX(0)";
-      text.style.fontWeight = "500";
     }
+    if (text) text.style.fontWeight = "500"; // siempre normal si no activo
+  }
 
-    if (link.classList.contains("active")) activateLine();
+  if (link.classList.contains("active")) activateLine();
 
-    link.addEventListener("mouseenter", activateLine);
-    link.addEventListener("mouseleave", () => {
-      if (!link.classList.contains("active")) deactivateLine();
-    });
+  link.addEventListener("mouseenter", activateLine);
+  link.addEventListener("mouseleave", () => {
+    if (!link.classList.contains("active")) deactivateLine();
   });
+});
 
   // =========================
-  // BARRA DE PROGRESO PEGADA A EXPERIENCE-YEAR
+  // BARRA DE PROGRESO EXPERIENCE
   // =========================
-  const progressBar = document.getElementById("progress-bar");    
-  const progressTrack = document.getElementById("progress-track"); 
-  const allYears = document.querySelectorAll(".experience-year"); 
+  const progressBar = document.getElementById("progress-bar");
+  const progressTrack = document.getElementById("progress-track");
+  const allYears = document.querySelectorAll(".experience-year");
 
   const updateProgressPosition = () => {
     if (allYears.length === 0) return;
@@ -44,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const firstYear = allYears[0];
     const lastYear = allYears[allYears.length - 1];
 
-    // Posición horizontal centrada según el primer círculo
     const firstRect = firstYear.getBoundingClientRect();
     const scrollLeft = window.scrollX || window.pageXOffset;
     const leftPosition = firstRect.left + scrollLeft + firstRect.width / 2;
@@ -52,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
     progressTrack.style.left = `${leftPosition}px`;
     progressBar.style.left = `${leftPosition}px`;
 
-    // Top absoluto del primer y último círculo
     const trackTop = firstYear.getBoundingClientRect().top + window.scrollY + firstRect.height / 2;
     const lastRect = lastYear.getBoundingClientRect();
     const trackBottom = lastRect.top + window.scrollY + lastRect.height / 2;
@@ -65,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
     progressBar.dataset.maxHeight = trackHeight;
   }
 
-  // Actualizar barra de progreso al hacer scroll
   const updateProgressHeight = () => {
+    if (!progressBar) return;
     const maxHeight = parseFloat(progressBar.dataset.maxHeight) || 0;
     const scrollMiddle = window.scrollY + window.innerHeight / 2;
     let progress = (scrollMiddle - parseFloat(progressBar.style.top)) / maxHeight;
@@ -74,66 +90,61 @@ document.addEventListener("DOMContentLoaded", () => {
     progressBar.style.height = `${progress * maxHeight}px`;
   }
 
-  // Inicialización
   updateProgressPosition();
   updateProgressHeight();
-
-  // Eventos
   window.addEventListener("scroll", updateProgressHeight);
   window.addEventListener("resize", () => {
     updateProgressPosition();
     updateProgressHeight();
   });
 
+  // =========================
+  // BARRA DE PROGRESO EDUCATION
+  // =========================
+  const eduProgressBar = document.getElementById("edu-progress-bar");
+  const eduProgressTrack = document.getElementById("edu-progress-track");
+  const allEduYears = document.querySelectorAll(".education-year");
 
-  // =====================
-// EDUCATION TRACK
-// =====================
-const eduProgressBar = document.getElementById("edu-progress-bar");    
-const eduProgressTrack = document.getElementById("edu-progress-track"); 
-const allEduYears = document.querySelectorAll(".education-year"); 
+  const updateEduProgressPosition = () => {
+    if (allEduYears.length === 0) return;
 
-const updateEduProgressPosition = () => {
-  if (allEduYears.length === 0) return;
+    const firstYear = allEduYears[0];
+    const lastYear = allEduYears[allEduYears.length - 1];
 
-  const firstYear = allEduYears[0];
-  const lastYear = allEduYears[allEduYears.length - 1];
+    const firstRect = firstYear.getBoundingClientRect();
+    const scrollLeft = window.scrollX || window.pageXOffset;
+    const leftPosition = firstRect.left + scrollLeft + firstRect.width / 2;
 
-  const firstRect = firstYear.getBoundingClientRect();
-  const scrollLeft = window.scrollX || window.pageXOffset;
-  const leftPosition = firstRect.left + scrollLeft + firstRect.width / 2;
+    eduProgressTrack.style.left = `${leftPosition}px`;
+    eduProgressBar.style.left = `${leftPosition}px`;
 
-  eduProgressTrack.style.left = `${leftPosition}px`;
-  eduProgressBar.style.left = `${leftPosition}px`;
+    const trackTop = firstYear.getBoundingClientRect().top + window.scrollY + firstRect.height / 2;
+    const lastRect = lastYear.getBoundingClientRect();
+    const trackBottom = lastRect.top + window.scrollY + lastRect.height / 2;
 
-  const trackTop = firstYear.getBoundingClientRect().top + window.scrollY + firstRect.height / 2;
-  const lastRect = lastYear.getBoundingClientRect();
-  const trackBottom = lastRect.top + window.scrollY + lastRect.height / 2;
+    const trackHeight = trackBottom - trackTop;
+    eduProgressTrack.style.top = `${trackTop}px`;
+    eduProgressTrack.style.height = `${trackHeight}px`;
 
-  const trackHeight = trackBottom - trackTop;
-  eduProgressTrack.style.top = `${trackTop}px`;
-  eduProgressTrack.style.height = `${trackHeight}px`;
+    eduProgressBar.style.top = `${trackTop}px`;
+    eduProgressBar.dataset.maxHeight = trackHeight;
+  }
 
-  eduProgressBar.style.top = `${trackTop}px`;
-  eduProgressBar.dataset.maxHeight = trackHeight;
-}
+  const updateEduProgressHeight = () => {
+    if (!eduProgressBar) return;
+    const maxHeight = parseFloat(eduProgressBar.dataset.maxHeight) || 0;
+    const scrollMiddle = window.scrollY + window.innerHeight / 2;
+    let progress = (scrollMiddle - parseFloat(eduProgressBar.style.top)) / maxHeight;
+    progress = Math.max(0, Math.min(1, progress));
+    eduProgressBar.style.height = `${progress * maxHeight}px`;
+  }
 
-const updateEduProgressHeight = () => {
-  const maxHeight = parseFloat(eduProgressBar.dataset.maxHeight) || 0;
-  const scrollMiddle = window.scrollY + window.innerHeight / 2;
-  let progress = (scrollMiddle - parseFloat(eduProgressBar.style.top)) / maxHeight;
-  progress = Math.max(0, Math.min(1, progress));
-  eduProgressBar.style.height = `${progress * maxHeight}px`;
-}
-
-// Inicializar y eventos
-updateEduProgressPosition();
-updateEduProgressHeight();
-window.addEventListener("scroll", updateEduProgressHeight);
-window.addEventListener("resize", () => {
   updateEduProgressPosition();
   updateEduProgressHeight();
-});
-
+  window.addEventListener("scroll", updateEduProgressHeight);
+  window.addEventListener("resize", () => {
+    updateEduProgressPosition();
+    updateEduProgressHeight();
+  });
 
 });

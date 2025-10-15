@@ -104,6 +104,13 @@ main {
   box-sizing: border-box;
 }
 
+.wellcome-section {
+  padding-bottom: 12vh;
+  /* o ajusta a 10vh si quieres más aire */
+}
+
+
+
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::FIN WELLCOME AREA::::::::::::::::::::::::::::::: */
 /* ::::::::::::::::::::::::::::::::::::::::::::::::boton next section::::::::::::::::::::::::::::::: */
@@ -168,12 +175,12 @@ html {
   color: var(--scroll-color5);
 }
 
-.experiences h2 { 
-  padding-top: 50px; 
+.experiences h2 {
+  padding-top: 50px;
 }
 
-.experiences p { 
-  padding-bottom: 1px; 
+.experiences p {
+  padding-bottom: 1px;
 }
 
 .experiences hr {
@@ -189,7 +196,7 @@ html {
   background: var(--scroll-color);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   max-width: 500px;
   margin: 1rem auto;
   overflow: visible;
@@ -200,82 +207,89 @@ html {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.experience-card h3 { 
-  font-size: 1.5rem; 
-  margin-bottom:0.5rem; 
-  color: var(--scroll-color5); 
+.experience-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--scroll-color5);
 }
-.experience-date { 
-  font-size:0.9rem; 
-  color: var(--scroll-color3); 
-  margin-bottom:1rem; 
+
+.experience-date {
+  font-size: 0.9rem;
+  color: var(--scroll-color3);
+  margin-bottom: 1rem;
 }
-.experience-role { 
-  font-weight:600; 
-  margin-bottom:1rem; 
-  color: var(--scroll-color3); 
+
+.experience-role {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--scroll-color3);
 }
-.experience-desc { 
-  font-size:0.95rem; 
-  color: var(--scroll-color5); 
-  margin-bottom:1rem; line-height:1.5; 
+
+.experience-desc {
+  font-size: 0.95rem;
+  color: var(--scroll-color5);
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
-.experience-tech { 
-  display:flex; 
-  gap:0.5rem; 
-  flex-wrap:wrap; 
+
+.experience-tech {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
-.experience-tech span { 
-  background:#f0f0f0; 
-  padding:0.3rem 0.6rem; 
-  border-radius:0.5rem; 
-  font-size:0.8rem; 
-  color: var(--scroll-color5); 
+
+.experience-tech span {
+  background: #f0f0f0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--scroll-color5);
 }
 
 .experience-card::before {
-  content:'<';
-  position:absolute;
-  top:60px;
-  left:-23px;
-  font-size:1rem;
+  content: '<';
+  position: absolute;
+  top: 60px;
+  left: -23px;
+  font-size: 1rem;
   color: var(--scroll-color5);
-  z-index:5;
+  z-index: 5;
 }
 
 .experience-year {
-  position:absolute;
-  top:70px;
-  width:60px; height:60px;
-  border-radius:50%;
+  position: absolute;
+  top: 70px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   background-color: var(--scroll-color);
   color: var(--scroll-color5);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-  z-index:6;
-  left:-150px;
-  transform:translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  z-index: 6;
+  left: -150px;
+  transform: translateY(-50%);
 }
 
 /* Track y barra de progreso */
 #progress-track {
-  position:absolute;
-  width:4px;
+  position: absolute;
+  width: 4px;
   background-color: var(--scroll-color2);
-  border-radius:2px;
-  z-index:2;
+  border-radius: 2px;
+  z-index: 2;
 }
 
 #progress-bar {
-  position:absolute;
-  width:4px;
+  position: absolute;
+  width: 4px;
   background-color: var(--scroll-color5);
-  border-radius:2px;
+  border-radius: 2px;
   transition: height 0.1s ease;
-  height:0;
-  z-index:3;
+  height: 0;
+  z-index: 3;
 }
 
 
@@ -331,7 +345,8 @@ html {
   width: 100%;
   background-color: var(--scroll-color1);
   padding-top: 50px;
-  text-align: center;/* igual que proyectos */
+  text-align: center;
+  /* igual que proyectos */
   font-weight: 400;
   color: var(--scroll-color5);
 }
@@ -345,28 +360,38 @@ html {
 }
 
 .contacto hr {
-  border: none;/* eliminamos estilos por defecto */
-  border-top: 1px solid #e5e5e5;/* línea gris muy clara */
-  margin: 1rem auto;/* buen espacio arriba y abajo */
-  width: 30%;/* ocupa todo el contenedor */
+  border: none;
+  /* eliminamos estilos por defecto */
+  border-top: 1px solid #e5e5e5;
+  /* línea gris muy clara */
+  margin: 1rem auto;
+  /* buen espacio arriba y abajo */
+  width: 30%;
+  /* ocupa todo el contenedor */
 }
 
 .contact-iconos {
   display: flex;
-  justify-content: center;/* centra en horizontal */
-  gap: 30px;/* espacio entre iconos */
+  justify-content: center;
+  /* centra en horizontal */
+  gap: 30px;
+  /* espacio entre iconos */
   margin-top: 20px;
 }
 
 .contact-iconos a {
-  font-size: 2rem;/* tamaño de los iconos */
-  color: var(--scroll-color5);/* color base */
+  font-size: 2rem;
+  /* tamaño de los iconos */
+  color: var(--scroll-color5);
+  /* color base */
   transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .contact-iconos a:hover {
-  color: var(--scroll-color3);/* azul (LinkedIn como ejemplo) */
-  transform: scale(1.2);/* efecto zoom */
+  color: var(--scroll-color3);
+  /* azul (LinkedIn como ejemplo) */
+  transform: scale(1.2);
+  /* efecto zoom */
 }
 
 /* ::::::::::::::::::::::::::::::FIN ESTILO CONTACTO::::::::::::::::::::: */
@@ -427,7 +452,8 @@ html {
 /* Cabecera proyectos*/
 .proyectos {
   width: 100%;
-  background-color: var(--scroll-color1);/* padding: 1.2rem 0rem; */
+  background-color: var(--scroll-color1);
+  /* padding: 1.2rem 0rem; */
   text-align: center;
   color: var(--scroll-color5);
 }
@@ -440,8 +466,10 @@ html {
 }
 
 .proyectos h2 i {
-  font-size: 1.2rem;/* Tamaño del icono ligeramente más grande */
-  -webkit-text-stroke: 0px var(--scroll-color5);/* borde externo */
+  font-size: 1.2rem;
+  /* Tamaño del icono ligeramente más grande */
+  -webkit-text-stroke: 0px var(--scroll-color5);
+  /* borde externo */
 }
 
 .proyectos p {
@@ -467,9 +495,12 @@ html {
 /* Contenedor tarjetas proyectos */
 .proyectos-cards {
   display: flex;
-  flex-direction: column;/* coloca las tarjetas una debajo de otra */
-  gap: 2rem;/* separación entre tarjetas */
-  margin: 0rem 0;/* opcional: espacio arriba y abajo del bloque completo */
+  flex-direction: column;
+  /* coloca las tarjetas una debajo de otra */
+  gap: 2rem;
+  /* separación entre tarjetas */
+  margin: 0rem 0;
+  /* opcional: espacio arriba y abajo del bloque completo */
 }
 
 
@@ -483,19 +514,26 @@ html {
   border-radius: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 800px;/* mismo ancho que experiencias */
+  max-width: 800px;
+  /* mismo ancho que experiencias */
   margin: 0rem auto;
 }
 
 
 .proyectos-card img {
-  width: 355px;/* ajusta al tamaño que quieras */
+  width: 355px;
+  /* ajusta al tamaño que quieras */
   height: auto;
-  margin: 0;/* sin márgenes */
-  padding: 0;/* sin padding */
-  border-radius: 15px;/* sin redondeo */
-  object-fit: cover;/* mantiene proporción y recorta si es necesario */
-  flex-shrink: 0;/* evita que se reduzca */
+  margin: 0;
+  /* sin márgenes */
+  padding: 0;
+  /* sin padding */
+  border-radius: 15px;
+  /* sin redondeo */
+  object-fit: cover;
+  /* mantiene proporción y recorta si es necesario */
+  flex-shrink: 0;
+  /* evita que se reduzca */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* sombra sutil */
 }
@@ -717,107 +755,245 @@ html {
   stroke-linejoin: round;
 }
 
-
 /* :::::::::::::::::::::::::::::FIN FOOTER::::::::::::::::::::::::::: */
+/* ===================================================
+   BOTONES HAMBURGUESA
+   =================================================== */
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--scroll-color5);
+  color: var(--scroll-color1);
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.3s, transform 0.2s;
+}
 
-/* ::::::::::::::::::::::::::::::::::::::::::: RESPONSIVE ::::::::::::::::::::::::::::::::::::::::::: */
+.hamburger-btn:hover {
+  background-color: var(--scroll-color3);
+  transform: scale(1.1);
+}
 
-/* Tablets (≤ 1024px) */
-@media (max-width: 1024px) {
-  .wellcome-text h1 {
-    font-size: 4rem;
+.hamburger-btn.cerrar {
+  display: none;
+}
+
+/* ===================================================
+       MENÚ HAMBURGER / WELL-COME MOBILE FIRST
+     =================================================== */
+
+/* --------------------- MÓVIL --------------------- */
+@media screen and (max-width: 550px) {
+
+  /* Botón hamburguesa visible */
+  .hamburger-btn {
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.5rem;
   }
-  .proyectos-card {
+
+  /* Menú lateral */
+  .wellcome-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color: var(--scroll-color5);
+    color: var(--scroll-color1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 2rem;
     gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 99;
   }
-  .proyectos-card img {
-    width: 250px;
-  }
-}
 
-/* Móviles grandes (≤ 768px) */
-@media (max-width: 768px) {
-  .wellcome-content {
+  .wellcome-menu.open {
+    transform: translateX(0);
+  }
+
+  /* Lista de enlaces */
+  .nav-links {
     flex-direction: column;
     gap: 1.5rem;
-    padding: 0 1rem;
-    text-align: center;
-  }
-
-  .wellcome-text {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .wellcome-text h1 {
-    font-size: 3rem;
-  }
-
-  .experience-card {
-    max-width: 100%;
-    padding: 1.5rem;
-  }
-
-  .experience-year {
-    position: static;
-    margin: 0 auto 1rem auto;
-    transform: none;
-  }
-
-  #progress-track,
-  #progress-bar {
-    display: none; /* se elimina la barra lateral en móvil */
-  }
-
-  .proyectos-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-    max-width: 100%;
-    padding: 1.5rem;
-  }
-
-  .proyectos-card img {
     width: 100%;
-    max-width: 100%;
   }
 
-  .proyectos-card-content {
-    text-align: center;
+  .nav-links li a {
+    color: var(--scroll-color1);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: none;
   }
 
-  .contact-iconos {
-    gap: 20px;
-  }
-}
-
-/* Móviles pequeños (≤ 480px) */
-@media (max-width: 480px) {
-  .wellcome-text h1 {
-    font-size: 2.2rem;
+  /* Mostrar el link activo en mobile */
+  .nav-links li a.active {
+    color: var(--scroll-color1);
+    font-weight: 700;
   }
 
+  .nav-links li a.active span {
+    font-weight: 700 !important;
+    transform: none !important;
+  }
+
+  /* =========================
+         WELL-COME MOBILE FIRST
+       ========================= */
+
+  /* Contenedor general */
+  .wellcome-section {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1rem;
+    position: relative;
+  }
+
+  /* Cabecera h1 + hamburguesa */
+  .wellcome-section .wellcome-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 1rem;
+  }
+
+  /* h1 ajustado */
+  .wellcome-section .wellcome-text h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-align: left;
+    flex-shrink: 1;
+  }
+
+  /* h2 y párrafo */
   .wellcome-text h2 {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: left;
   }
 
   .wellcome-text p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 100%;
+    /* quitar límite que lo centra */
+    margin: 0;
+    /* quitar auto para alinear a la izquierda */
+    text-align: left;
+    /* alinear texto a la izquierda */
   }
 
-  .experience-card h3,
-  .proyectos-card h3 {
-    font-size: 1.2rem;
+
+  /* Posicionar hamburguesa */
+  .hamburger-btn {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 100;
   }
 
-  .proyectos-desc,
-  .experience-desc {
-    font-size: 0.85rem;
+  /* Indicador de scroll */
+  .scroll-indicator svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  /* --------------------- EXPERIENCE & EDUCATION MOBILE --------------------- */
+
+  .experience-cards,
+  .education-cards {
+    padding-left: 1rem;
+    /* margen interno izquierdo */
+    padding-right: 1rem;
+    /* margen interno derecho */
+    box-sizing: border-box;
+    /* para que el padding no aumente el ancho total */
+  }
+
+  /* --------------------- PORTFOLIO --------------------- */
+
+  /* Contenedor de tarjetas */
+  .proyectos-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+    /* mismos márgenes laterales que experience/education */
+  }
+
+  .proyectos-card {
+    display: flex;
+    flex-direction: column;
+    /* imagen arriba, texto abajo */
+    background-color: var(--scroll-color5);
+    color: var(--scroll-color1);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .proyectos-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .proyectos-card-content {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .proyectos-card-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .proyectos-card-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .proyectos-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .proyecto-btn {
-    width: 100%;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--scroll-color3);
+    color: var(--scroll-color1);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.3s;
+  }
+
+  .proyecto-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--scroll-color2);
   }
 }
-/* ::::::::::::::::::::::::::::::::::::::::::: FIN RESPONSIVE ::::::::::::::::::::::::::::::::::::::::::: */
