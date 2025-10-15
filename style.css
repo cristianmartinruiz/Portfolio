@@ -17,6 +17,7 @@
 }
 
 body {
+  overflow-x: hidden;
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -754,48 +755,56 @@ html {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
 /* :::::::::::::::::::::::::::::FIN FOOTER::::::::::::::::::::::::::: */
 /* ===================================================
-   BOTONES HAMBURGUESA
+   BOTÓN HAMBURGUESA
    =================================================== */
+
 .hamburger-btn {
-  display: none;
+  display: block;
   position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: var(--scroll-color5);
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
   color: var(--scroll-color1);
-  border: none;
-  padding: 0.6rem 1rem;
-  font-size: 1.5rem;
-  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
   cursor: pointer;
-  z-index: 100;
+  z-index: 200;
   transition: background 0.3s, transform 0.2s;
 }
 
 .hamburger-btn:hover {
-  background-color: var(--scroll-color3);
+  background: rgba(255, 255, 255, 0.25);
   transform: scale(1.1);
 }
+
 
 .hamburger-btn.cerrar {
   display: none;
 }
 
 /* ===================================================
-       MENÚ HAMBURGER / WELL-COME MOBILE FIRST
-     =================================================== */
+       MENÚ HAMBURGER / WELCOME MOBILE FIRST
+   =================================================== */
 
-/* --------------------- MÓVIL --------------------- */
 @media screen and (max-width: 550px) {
 
-  /* Botón hamburguesa visible */
+  /* Mostrar botón hamburguesa */
   .hamburger-btn {
     display: block;
-    font-size: 1.5rem;
-    padding: 0.5rem;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--scroll-color5);
+    color: var(--scroll-color1);
+    font-size: 1.8rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    z-index: 200;
   }
 
   /* Menú lateral */
@@ -815,7 +824,7 @@ html {
     gap: 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    z-index: 99;
+    z-index: 150;
   }
 
   .wellcome-menu.open {
@@ -834,54 +843,40 @@ html {
     font-size: 1.2rem;
     font-weight: 500;
     text-decoration: none;
-    position: relative;
-    transition: none;
   }
 
-  /* Mostrar el link activo en mobile */
   .nav-links li a.active {
     color: var(--scroll-color1);
     font-weight: 700;
   }
 
-  .nav-links li a.active span {
-    font-weight: 700 !important;
-    transform: none !important;
-  }
-
   /* =========================
          WELL-COME MOBILE FIRST
-       ========================= */
-
-  /* Contenedor general */
+     ========================= */
   .wellcome-section {
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     gap: 1rem;
     position: relative;
   }
 
-  /* Cabecera h1 + hamburguesa */
   .wellcome-section .wellcome-text {
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: flex-start;
     width: 100%;
     max-width: 500px;
     padding: 0 1rem;
   }
 
-  /* h1 ajustado */
   .wellcome-section .wellcome-text h1 {
     font-size: 4rem;
     margin: 0;
     text-align: left;
-    flex-shrink: 1;
   }
 
-  /* h2 y párrafo */
   .wellcome-text h2 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -891,57 +886,34 @@ html {
   .wellcome-text p {
     font-size: 1rem;
     line-height: 1.4;
-    max-width: 100%;
-    /* quitar límite que lo centra */
     margin: 0;
-    /* quitar auto para alinear a la izquierda */
     text-align: left;
-    /* alinear texto a la izquierda */
   }
 
-
-  /* Posicionar hamburguesa */
-  .hamburger-btn {
-    position: absolute;
-    top: 3rem;
-    right: 3rem;
-    z-index: 100;
-  }
-
-  /* Indicador de scroll */
+  /* Indicador scroll */
   .scroll-indicator svg {
     width: 24px;
     height: 24px;
   }
 
-
-  /* --------------------- EXPERIENCE & EDUCATION MOBILE --------------------- */
-
+  /* EXPERIENCE & EDUCATION */
   .experience-cards,
   .education-cards {
-    padding-left: 1rem;
-    /* margen interno izquierdo */
-    padding-right: 1rem;
-    /* margen interno derecho */
+    padding: 0 1rem;
     box-sizing: border-box;
-    /* para que el padding no aumente el ancho total */
   }
 
-  /* --------------------- PORTFOLIO --------------------- */
-
-  /* Contenedor de tarjetas */
+  /* PORTFOLIO */
   .proyectos-cards {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 0 2rem;
-    /* mismos márgenes laterales que experience/education */
   }
 
   .proyectos-card {
     display: flex;
     flex-direction: column;
-    /* imagen arriba, texto abajo */
     background-color: var(--scroll-color);
     color: var(--scroll-color1);
     border-radius: 1rem;
@@ -962,8 +934,7 @@ html {
   }
 
   .proyectos-card-content h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem;
     font-size: 1.5rem;
   }
 
@@ -998,17 +969,10 @@ html {
     background-color: var(--scroll-color2);
   }
 
-  .proyectos p{
-    padding: 0 2rem;
-  }
-
-  /* --------------------- FOOTER --------------------- */
-  .footer p{
-    padding: 0 2rem;
-  }
-
-  /* --------------------- CONTACTO --------------------- */
-  .contacto p{
+  /* TEXTOS */
+  .proyectos p,
+  .footer p,
+  .contacto p {
     padding: 0 2rem;
   }
 }
