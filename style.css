@@ -36,23 +36,40 @@ main {
 
 }
 
-/* ::::::::::::::::::::::::::::::::::::::::::::::::WELLCOME AREA::::::::::::::::::::::::::::::: */
-/* ::::::::::::::::::::::::::::::::::::::::::::::::boton next section::::::::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::::::::: WELLCOME AREA ::::::::::::::::::::::::::::: */
 
-.wellcome-text {
-  flex-basis: 50%;
-  flex-grow: 0;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  padding-left: 20px;
-  /* separación del menú */
-  flex: 1;
+/* Contenedor principal */
+.wellcome-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
+/* MENU - izquierda */
+.wellcome-menu {
+  flex: 1 1 50%; /* ocupa la mitad izquierda */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centrado vertical */
+  align-items: flex-start; /* alineado a la izquierda */
+  padding-left: 20px;
+}
+
+/* TEXTO - derecha */
+.wellcome-text {
+  flex: 1 1 50%; /* ocupa la mitad derecha */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centrado vertical */
+  padding-left: 40px;
+  text-align: left;
+  min-width: 0; /* evita overflow */
+}
+
+/* H1, H2, P */
 .wellcome-text h1 {
   margin: 0 0 10px;
   font-size: 6rem;
@@ -69,49 +86,21 @@ main {
   font-size: 1rem;
   line-height: 1.5;
   color: var(--scroll-color5);
+  max-width: 350px; /* ancho máximo del párrafo */
 }
 
+
+/* Sección completa */
 .wellcome-section {
-  position: relative;
-  width: 100%;
   background-color: var(--scroll-color);
-  box-shadow: 0 0.1px 6px rgba(0, 0, 0, 0.08);
-  padding: 3rem 2rem;
-  height: 40vh;
-}
-
-.wellcome-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 1000px;
   width: 100%;
-  box-sizing: border-box;
-}
-
-/* Opcional: para que el menú quede bien alineado a la izquierda y el texto también */
-.wellcome-menu {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-right: 20px;
-  /* espacio interno */
-  flex-basis: 50%;
-  flex-grow: 0;
-  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
   box-sizing: border-box;
+  position: relative;
 }
-
-.wellcome-section {
-  padding-bottom: 12vh;
-  /* o ajusta a 10vh si quieres más aire */
-}
-
-
-
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::FIN WELLCOME AREA::::::::::::::::::::::::::::::: */
 /* ::::::::::::::::::::::::::::::::::::::::::::::::boton next section::::::::::::::::::::::::::::::: */
@@ -762,7 +751,7 @@ html {
    =================================================== */
 
 .hamburger-btn {
-  display: block;
+  display: none;
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -808,30 +797,6 @@ html {
     z-index: 200;
   }
 
-  /* Menú lateral */
-  .wellcome-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 70%;
-    max-width: 300px;
-    background-color: var(--scroll-color5);
-    color: var(--scroll-color1);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 3rem 2rem;
-    gap: 2rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 150;
-  }
-
-  .wellcome-menu.open {
-    transform: translateX(0);
-  }
-
   /* Lista de enlaces */
   .nav-links {
     flex-direction: column;
@@ -853,8 +818,66 @@ html {
 
   /* =========================
          WELL-COME MOBILE FIRST
-     ========================= */
-  .wellcome-section {
+  ========================= */
+/* -------- Wellcome Area Mobile -------- */
+.wellcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Menú lateral hamburguesa */
+.wellcome-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* empuja todo hacia arriba */
+  align-items: flex-start;     /* opcional: si quieres que queden alineados a la izquierda */
+  padding-top: 2rem;           /* espacio desde el top, opcional */
+  height: 100vh;
+  width: 70%;
+  max-width: 300px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--scroll-color5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 150;
+}
+
+
+/* Menú abierto */
+.wellcome-menu.open {
+  transform: translateX(0);
+}
+
+/* Texto de bienvenida */
+.wellcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra vertical */
+  align-items: center;     /* centra horizontal */
+  text-align: center;
+  width: 100%;
+}
+
+/* Ajuste de párrafos */
+.wellcome-text p {
+  max-width: 500px;  /* ancho máximo para no estirarse */
+  margin: 1rem auto; /* centrado horizontal */
+  line-height: 1.6;
+}
+
+.wellcome-text h1 {
+  font-size: 5em;
+}
+
+
+  /* .wellcome-section {
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -889,7 +912,7 @@ html {
     line-height: 1.4;
     margin: 0;
     text-align: left;
-  }
+  } */
 
   /* Indicador scroll */
   .scroll-indicator svg {
