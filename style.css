@@ -50,23 +50,29 @@ main {
 
 /* MENU - izquierda */
 .wellcome-menu {
-  flex: 1 1 50%; /* ocupa la mitad izquierda */
+  flex: 1 1 50%;
+  /* ocupa la mitad izquierda */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centrado vertical */
-  align-items: flex-start; /* alineado a la izquierda */
+  justify-content: center;
+  /* centrado vertical */
+  align-items: flex-start;
+  /* alineado a la izquierda */
   padding-left: 20px;
 }
 
 /* TEXTO - derecha */
 .wellcome-text {
-  flex: 1 1 50%; /* ocupa la mitad derecha */
+  flex: 1 1 50%;
+  /* ocupa la mitad derecha */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centrado vertical */
-  padding-left: 40px;
+  justify-content: center;
+  /* centrado vertical */
+  /* padding-left: 40px; */
   text-align: left;
-  min-width: 0; /* evita overflow */
+  min-width: 0;
+  /* evita overflow */
 }
 
 /* H1, H2, P */
@@ -86,7 +92,8 @@ main {
   font-size: 1rem;
   line-height: 1.5;
   color: var(--scroll-color5);
-  max-width: 350px; /* ancho máximo del párrafo */
+  max-width: 350px;
+  /* ancho máximo del párrafo */
 }
 
 
@@ -97,7 +104,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 2rem;
+  padding: 3em 1em;
   box-sizing: border-box;
   position: relative;
 }
@@ -819,100 +826,76 @@ html {
   /* =========================
          WELL-COME MOBILE FIRST
   ========================= */
-/* -------- Wellcome Area Mobile -------- */
-.wellcome-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  padding: 1rem;
-}
-
-/* Menú lateral hamburguesa */
-.wellcome-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* empuja todo hacia arriba */
-  align-items: flex-start;     /* opcional: si quieres que queden alineados a la izquierda */
-  padding-top: 2rem;           /* espacio desde el top, opcional */
-  height: 100vh;
-  width: 70%;
-  max-width: 300px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: var(--scroll-color5);
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  z-index: 150;
-}
-
-
-/* Menú abierto */
-.wellcome-menu.open {
-  transform: translateX(0);
-}
-
-/* Texto de bienvenida */
-.wellcome-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centra vertical */
-  align-items: center;     /* centra horizontal */
-  text-align: center;
-  width: 100%;
-}
-
-/* Ajuste de párrafos */
-.wellcome-text p {
-  max-width: 500px;  /* ancho máximo para no estirarse */
-  margin: 1rem auto; /* centrado horizontal */
-  line-height: 1.6;
-}
-
-.wellcome-text h1 {
-  font-size: 5em;
-}
-
-
-  /* .wellcome-section {
-    padding: 2rem 1rem;
+  /* -------- Wellcome Area Mobile -------- */
+  .wellcome-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    position: relative;
-  }
-
-  .wellcome-section .wellcome-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
     width: 100%;
-    max-width: 500px;
-    padding: 0 1rem;
+    max-width: 330px;
+    /* <-- límite cómodo en móviles */
+    margin: 0 auto;
+    /* <-- centra horizontalmente */
+    padding: 0.1em;
   }
 
-  .wellcome-section .wellcome-text h1 {
-    font-size: 4rem;
+  /* Menú lateral hamburguesa */
+  .wellcome-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* empuja todo hacia arriba */
+    align-items: flex-start;
+    /* opcional: si quieres que queden alineados a la izquierda */
+    padding-top: 2rem;
+    /* espacio desde el top, opcional */
+    height: 100dvh;
+    width: 70%;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--scroll-color5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 200;
+  }
+
+
+  /* Menú abierto */
+  .wellcome-menu.open {
+    transform: translateX(0);
+  }
+
+  /* Texto de bienvenida */
+  .wellcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centra vertical */
+    align-items: center;
+    /* centra horizontal */
+    text-align: center;
+    width: 100%;
     margin: 0;
-    text-align: left;
+    text-align: center;
   }
 
-  .wellcome-text h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-
+  /* Ajuste de párrafos */
   .wellcome-text p {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin: 0;
-    text-align: left;
-  } */
+    max-width: 500px;
+    /* ancho máximo para no estirarse */
+    margin: 1rem auto;
+    /* centrado horizontal */
+    line-height: 1.6;
+  }
+
+  .wellcome-text h1 {
+    font-size: 5em;
+  }
+
 
   /* Indicador scroll */
   .scroll-indicator svg {
@@ -921,15 +904,17 @@ html {
   }
 
   /* EXPERIENCE & EDUCATION */
+
+
   .experience-cards,
-  .education-cards {
+  .education-card-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 0 2rem;
-    /* Igual que portfolio */
-    box-sizing: border-box;
   }
+
+
 
   .experience-card,
   .education-card {
@@ -938,15 +923,19 @@ html {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 1em 2em 2em 2em;
   }
 
-  /* PORTFOLIO */
+  /* Final EXPERIENCE & EDUCATION */
+
+  /* ----------------- TARJETAS PROYECTOS ----------------- */
   .proyectos-cards {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
+    /* espacio entre tarjetas */
     padding: 0 2rem;
+    /* padding lateral */
   }
 
   .proyectos-card {
@@ -957,22 +946,27 @@ html {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em 2em 2em 2em;
   }
 
   .proyectos-card img {
-    margin-bottom: -3rem;
     width: 100%;
     height: auto;
     object-fit: cover;
+    margin-bottom: 0em;
+    /* espacio visual consistente */
+    margin-top: 1.25em;
   }
 
   .proyectos-card-content {
-    padding: 1rem;
+    padding: 0;
+    /* ya tenemos padding en la tarjeta */
     text-align: left;
   }
 
   .proyectos-card-content h3 {
-    margin: 0 0 0.5rem;
+    margin-top: 0;
+    /* margin: 0 0 0.5rem; */
     font-size: 1.5rem;
   }
 
@@ -985,7 +979,7 @@ html {
   .proyectos-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.5em;
     margin-bottom: 1rem;
   }
 
@@ -1011,6 +1005,6 @@ html {
   .proyectos p,
   .footer p,
   .contacto p {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 }
